@@ -13,6 +13,7 @@ type DigimonClient struct {
 	Attribute AttributeService
 	Level     LevelService
 	Type      TypeService
+	Skill     SkillService
 }
 
 func NewDigimonClient() DigimonClient {
@@ -28,5 +29,6 @@ func NewDigimonClientWith(h *http.Client) DigimonClient {
 	c.Attribute = NewAttributeService(c.client)
 	c.Level = NewLevelService(c.client)
 	c.Type = NewTypeService(c.client)
+	c.Skill = NewSkillService(c.client)
 	return c
 }

@@ -1,0 +1,41 @@
+{
+	"content": {
+		"name": "Skill",
+		"description": "It's often used for offensive means, however it can be used for other objectives such as healing itself or another digimon.\nIt may happen that certain skills that can be unique for a certain Digimon, however this is not a rule,  various Digimon have abilities that's shared between then.",
+		"fields": [
+			{
+				"id": 3531,
+				"name": "Yūki no Gaia Force",
+				"href": "https://digi-api.com/api/v1/skill/3531"
+			},
+			{
+				"id": 3532,
+				"name": "Ultra Tornado",
+				"href": "https://digi-api.com/api/v1/skill/3532"
+			},
+			{
+				"id": 3533,
+				"name": "Kūchū Dramon Killer",
+				"href": "https://digi-api.com/api/v1/skill/3533"
+			},
+			{
+				"id": 3534,
+				"name": "Dragon Killer",
+				"href": "https://digi-api.com/api/v1/skill/3534"
+			},
+			{
+				"id": 3535,
+				"name": "War Driver",
+				"href": "https://digi-api.com/api/v1/skill/3535"
+			}
+		]
+	},
+	"pageable": {
+		"currentPage": 706,
+		"elementsOnPage": 5,
+		"totalElements": 3537,
+		"totalPages": 706,
+		"previousPage": "https://digi-api.com/api/v1/skill?page=705",
+		"nextPage": ""
+	}
+}

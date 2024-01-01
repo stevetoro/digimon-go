@@ -1,0 +1,41 @@
+{
+	"content": {
+		"name": "Skill",
+		"description": "It's often used for offensive means, however it can be used for other objectives such as healing itself or another digimon.\nIt may happen that certain skills that can be unique for a certain Digimon, however this is not a rule,  various Digimon have abilities that's shared between then.",
+		"fields": [
+			{
+				"id": 1,
+				"name": "Speed Star",
+				"href": "https://digi-api.com/api/v1/skill/1"
+			},
+			{
+				"id": 2,
+				"name": "Solar Laser",
+				"href": "https://digi-api.com/api/v1/skill/2"
+			},
+			{
+				"id": 3,
+				"name": "Klinge Windrad",
+				"href": "https://digi-api.com/api/v1/skill/3"
+			},
+			{
+				"id": 4,
+				"name": "Klinge Wirbelwind",
+				"href": "https://digi-api.com/api/v1/skill/4"
+			},
+			{
+				"id": 5,
+				"name": "Licht Torpedo",
+				"href": "https://digi-api.com/api/v1/skill/5"
+			}
+		]
+	},
+	"pageable": {
+		"currentPage": 0,
+		"elementsOnPage": 5,
+		"totalElements": 3537,
+		"totalPages": 706,
+		"previousPage": "",
+		"nextPage": "https://digi-api.com/api/v1/skill?page=1"
+	}
+}
