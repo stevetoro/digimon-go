@@ -19,7 +19,7 @@ func NewHTTPClient(fn RoundTripFunc) *http.Client {
 }
 
 func LoadTestData(fileName string) io.ReadCloser {
-	file, err := os.Open(fmt.Sprintf("test/data/%s", fileName))
+	file, err := os.Open(fmt.Sprintf("../test/data/%s", fileName))
 	if err != nil {
 		panic(err)
 	}

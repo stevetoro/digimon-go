@@ -1,4 +1,4 @@
-package digimon
+package services
 
 import (
 	"encoding/json"
@@ -7,6 +7,8 @@ import (
 
 	"github.com/google/go-querystring/query"
 )
+
+const dapiUrl = "https://digi-api.com/api/v1"
 
 func do(client *http.Client, url string, obj any) error {
 	req, err := http.NewRequest(http.MethodGet, url, nil)

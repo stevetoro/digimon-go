@@ -2,18 +2,18 @@ package digimon
 
 import (
 	"net/http"
-)
 
-const dapiUrl = "https://digi-api.com/api/v1"
+	"github.com/stevetoro/digimon-go/services"
+)
 
 type DigimonClient struct {
 	client *http.Client
 
-	Digimon   DigimonService
-	Attribute AttributeService
-	Level     LevelService
-	Type      TypeService
-	Skill     SkillService
+	Digimon   services.DigimonService
+	Attribute services.AttributeService
+	Level     services.LevelService
+	Type      services.TypeService
+	Skill     services.SkillService
 }
 
 func NewDigimonClient() DigimonClient {
@@ -25,10 +25,10 @@ func NewDigimonClientWith(h *http.Client) DigimonClient {
 	if h != nil {
 		c.client = h
 	}
-	c.Digimon = NewDigimonService(c.client)
-	c.Attribute = NewAttributeService(c.client)
-	c.Level = NewLevelService(c.client)
-	c.Type = NewTypeService(c.client)
-	c.Skill = NewSkillService(c.client)
+	c.Digimon = services.NewDigimonService(c.client)
+	c.Attribute = services.NewAttributeService(c.client)
+	c.Level = services.NewLevelService(c.client)
+	c.Type = services.NewTypeService(c.client)
+	c.Skill = services.NewSkillService(c.client)
 	return c
 }

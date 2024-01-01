@@ -1,4 +1,4 @@
-package digimon_test
+package services_test
 
 import (
 	"net/http"
@@ -6,6 +6,7 @@ import (
 
 	"github.com/stevetoro/digimon-go"
 	"github.com/stevetoro/digimon-go/resources"
+	"github.com/stevetoro/digimon-go/services"
 	"github.com/stevetoro/digimon-go/test"
 	"github.com/stretchr/testify/assert"
 )
@@ -116,7 +117,7 @@ func TestDigimonPageNext(t *testing.T) {
 	}
 	assert.Equal(t, "", path)
 
-	page, err = page.Next()
+	_, err = page.Next()
 	if err != nil {
 		panic(err)
 	}
@@ -138,7 +139,7 @@ func TestDigimonNoNextPageErr(t *testing.T) {
 	}
 
 	_, err = page.Next()
-	assert.Error(t, digimon.NoNextPageErr, err)
+	assert.Error(t, services.ErrNoNextPage, err)
 }
 
 func TestDigimonPagePrev(t *testing.T) {
@@ -159,7 +160,7 @@ func TestDigimonPagePrev(t *testing.T) {
 	}
 	assert.Equal(t, "", path)
 
-	page, err = page.Prev()
+	_, err = page.Prev()
 	if err != nil {
 		panic(err)
 	}
@@ -181,10 +182,10 @@ func TestDigimonNoPrevPageErr(t *testing.T) {
 	}
 
 	_, err = page.Prev()
-	assert.Error(t, digimon.NoPrevPageErr, err)
+	assert.Error(t, services.ErrNoPrevPage, err)
 }
 
-func assertAgumon(t *testing.T, digimon digimon.Digimon) {
+func assertAgumon(t *testing.T, digimon services.Digimon) {
 	assert.Equal(t, 289, digimon.ID)
 	assert.Equal(t, "Agumon", digimon.Name)
 	assert.Equal(t, false, digimon.XAntibody)

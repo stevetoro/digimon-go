@@ -1,4 +1,4 @@
-package digimon
+package services
 
 import (
 	"fmt"
@@ -8,56 +8,55 @@ import (
 	"github.com/stevetoro/digimon-go/resources"
 )
 
-type LevelService struct {
+type AttributeService struct {
 	path   string
 	client *http.Client
 	params *resources.QueryParams
 }
 
-type Level struct {
-	resources.Level
+type Attribute struct {
+	resources.Attribute
 }
 
-type LevelPage struct {
-	resources.LevelPage
+type AttributePage struct {
+	resources.AttributePage
 
-	client  *http.Client
-	baseURL string
+	client *http.Client
 }
 
-func NewLevelService(client *http.Client) LevelService {
-	return LevelService{
-		path:   "/level",
+func NewAttributeService(client *http.Client) AttributeService {
+	return AttributeService{
+		path:   "/attribute",
 		client: client,
 	}
 }
 
-func (d LevelService) Name(s string) (res Level, err error) {
+func (d AttributeService) Name(s string) (res Attribute, err error) {
 	err = do(d.client, fmt.Sprintf("%s/%s", d.Endpoint(), s), &res)
 	return res, err
 }
 
-func (d LevelService) ID(i int) (res Level, err error) {
+func (d AttributeService) ID(i int) (res Attribute, err error) {
 	err = do(d.client, fmt.Sprintf("%s/%d", d.Endpoint(), i), &res)
 	return res, err
 }
 
-func (d LevelService) WithQueryParams(q resources.QueryParams) LevelService {
+func (d AttributeService) WithQueryParams(q resources.QueryParams) AttributeService {
 	d.params = &q
 	return d
 }
 
-func (d LevelService) List() (res LevelPage, err error) {
+func (d AttributeService) List() (res AttributePage, err error) {
 	res.client = d.client
 	err = do(d.client, d.EndpointWithParams(), &res)
 	return res, err
 }
 
-func (d LevelService) Endpoint() string {
+func (d AttributeService) Endpoint() string {
 	return dapiUrl + d.path
 }
 
-func (d LevelService) EndpointWithParams() string {
+func (d AttributeService) EndpointWithParams() string {
 	e := d.Endpoint()
 	if d.params != nil {
 		e += "?" + encodeQueryParams(d.params)
@@ -65,20 +64,20 @@ func (d LevelService) EndpointWithParams() string {
 	return e
 }
 
-func (d LevelPage) Next() (res LevelPage, err error) {
+func (d AttributePage) Next() (res AttributePage, err error) {
 	res.client = d.client
 	if d.Pageable.NextPage == "" {
-		return d, NoNextPageErr
+		return d, ErrNoNextPage
 	}
 	e := strings.Split(d.Pageable.NextPage, dapiUrl)
 	err = do(d.client, e[1], &res)
 	return res, err
 }
 
-func (d LevelPage) Prev() (res LevelPage, err error) {
+func (d AttributePage) Prev() (res AttributePage, err error) {
 	res.client = d.client
 	if d.Pageable.PreviousPage == "" {
-		return d, NoPrevPageErr
+		return d, ErrNoPrevPage
 	}
 	e := strings.Split(d.Pageable.PreviousPage, dapiUrl)
 	err = do(d.client, e[1], &res)

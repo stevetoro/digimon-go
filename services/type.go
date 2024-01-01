@@ -1,4 +1,4 @@
-package digimon
+package services
 
 import (
 	"fmt"
@@ -21,8 +21,7 @@ type Type struct {
 type TypePage struct {
 	resources.TypePage
 
-	client  *http.Client
-	baseURL string
+	client *http.Client
 }
 
 func NewTypeService(client *http.Client) TypeService {
@@ -68,7 +67,7 @@ func (d TypeService) EndpointWithParams() string {
 func (d TypePage) Next() (res TypePage, err error) {
 	res.client = d.client
 	if d.Pageable.NextPage == "" {
-		return d, NoNextPageErr
+		return d, ErrNoNextPage
 	}
 	e := strings.Split(d.Pageable.NextPage, dapiUrl)
 	err = do(d.client, e[1], &res)
@@ -78,7 +77,7 @@ func (d TypePage) Next() (res TypePage, err error) {
 func (d TypePage) Prev() (res TypePage, err error) {
 	res.client = d.client
 	if d.Pageable.PreviousPage == "" {
-		return d, NoPrevPageErr
+		return d, ErrNoPrevPage
 	}
 	e := strings.Split(d.Pageable.PreviousPage, dapiUrl)
 	err = do(d.client, e[1], &res)
