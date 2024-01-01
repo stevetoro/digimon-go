@@ -1,0 +1,36 @@
+{
+	"content": {
+		"name": "Type",
+		"description": "A Digimon's Type indicates what sort of category a Digimon's specific species belongs to. Many of these simply indicate what a Digimon is based on and only come into play under certain situations - some Digimon may have a certain advantage or disadvantage to a Digimon of another type. Or an item will work on a Digimon of one type or not the other.",
+		"fields": [
+			{
+				"id": 146,
+				"name": "Tropical Fish",
+				"href": "https://digi-api.com/api/v1/type/146"
+			},
+			{
+				"id": 147,
+				"name": "Ancient Mineral",
+				"href": "https://digi-api.com/api/v1/type/147"
+			},
+			{
+				"id": 148,
+				"name": "Ancient Ore",
+				"href": "https://digi-api.com/api/v1/type/148"
+			},
+			{
+				"id": 149,
+				"name": "Ancient Bird Man",
+				"href": "https://digi-api.com/api/v1/type/149"
+			}
+		]
+	},
+	"pageable": {
+		"currentPage": 29,
+		"elementsOnPage": 4,
+		"totalElements": 149,
+		"totalPages": 29,
+		"previousPage": "https://digi-api.com/api/v1/type?page=28",
+		"nextPage": ""
+	}
+}

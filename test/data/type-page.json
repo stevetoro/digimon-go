@@ -1,0 +1,41 @@
+{
+	"content": {
+		"name": "Type",
+		"description": "A Digimon's Type indicates what sort of category a Digimon's specific species belongs to. Many of these simply indicate what a Digimon is based on and only come into play under certain situations - some Digimon may have a certain advantage or disadvantage to a Digimon of another type. Or an item will work on a Digimon of one type or not the other.",
+		"fields": [
+			{
+				"id": 1,
+				"name": "Cyborg",
+				"href": "https://digi-api.com/api/v1/type/1"
+			},
+			{
+				"id": 2,
+				"name": "Holy Knight",
+				"href": "https://digi-api.com/api/v1/type/2"
+			},
+			{
+				"id": 3,
+				"name": "Archangel",
+				"href": "https://digi-api.com/api/v1/type/3"
+			},
+			{
+				"id": 4,
+				"name": "Ancient Insect",
+				"href": "https://digi-api.com/api/v1/type/4"
+			},
+			{
+				"id": 5,
+				"name": "Species Unknown",
+				"href": "https://digi-api.com/api/v1/type/5"
+			}
+		]
+	},
+	"pageable": {
+		"currentPage": 0,
+		"elementsOnPage": 5,
+		"totalElements": 149,
+		"totalPages": 29,
+		"previousPage": "",
+		"nextPage": "https://digi-api.com/api/v1/type?page=1"
+	}
+}
