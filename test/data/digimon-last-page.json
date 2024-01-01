@@ -1,0 +1,42 @@
+{
+	"content": [
+		{
+			"id": 1416,
+			"name": "Flamon",
+			"href": "https://digi-api.com/api/v1/digimon/1416",
+			"image": "https://digi-api.com/images/digimon/w/Flamon.png"
+		},
+		{
+			"id": 1417,
+			"name": "War Greymon",
+			"href": "https://digi-api.com/api/v1/digimon/1417",
+			"image": "https://digi-api.com/images/digimon/w/War_Greymon.png"
+		},
+		{
+			"id": 1418,
+			"name": "Gold Numemon (Ultimate)",
+			"href": "https://digi-api.com/api/v1/digimon/1418",
+			"image": "https://digi-api.com/images/digimon/w/Gold_Numemon_(Ultimate).png"
+		},
+		{
+			"id": 1419,
+			"name": "Ketomon",
+			"href": "https://digi-api.com/api/v1/digimon/1419",
+			"image": "https://digi-api.com/images/digimon/w/Ketomon.png"
+		},
+		{
+			"id": 1420,
+			"name": "Neo Vamdemon Darkness Mode (Shoutmon)",
+			"href": "https://digi-api.com/api/v1/digimon/1420",
+			"image": "https://digi-api.com/images/digimon/w/Neo_Vamdemon_Darkness_Mode_(Shoutmon).png"
+		}
+	],
+	"pageable": {
+		"currentPage": 283,
+		"elementsOnPage": 5,
+		"totalElements": 1422,
+		"totalPages": 283,
+		"previousPage": "https://digi-api.com/api/v1/digimon?page=282",
+		"nextPage": ""
+	}
+}
