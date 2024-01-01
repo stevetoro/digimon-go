@@ -1,0 +1,26 @@
+{
+	"content": {
+		"name": "Attribute",
+		"description": "Attribute refers to the type of computer file a Digimon represents. The Digimon are generally separated into three different attributes 'Data', 'Vaccine' and 'Virus', depending on the influence that they cause in the Environment. Digimon with the same name and different attributes sometimes look different and in some cases have different attacks or types as well. There are also 'Free' and 'Variable' attributes that are related to the Digimon known as 'Ancient Species'. Digimon with the Variable attribute, which at least so far means Hybrid, change attribute to match that of their opponent. Vaccine digimon are supposed to be more powerful against Virus digimon, Virus digimon are supposed to be more powerful against Data digimon, and Data digimon are supposed to be more powerful against Vaccine digimon. Digimon of the same attribute will generally get along well with each other. However, all of the above is not set in stone and there have been heroic Virus Digimon, as well as villainous Vaccine Digimon. The Attribute system started out as a sort of 'Rock, Paper, Scissors' determinator in the virtual pets. This is still, in essence, in use in most mediums (especially the Card Game), though less strongly stressed.",
+		"fields": [
+			{
+				"id": 6,
+				"name": "Data",
+				"href": "https://digi-api.com/api/v1/attribute/6"
+			},
+			{
+				"id": 7,
+				"name": "No Data",
+				"href": "https://digi-api.com/api/v1/attribute/7"
+			}
+		]
+	},
+	"pageable": {
+		"currentPage": 1,
+		"elementsOnPage": 2,
+		"totalElements": 7,
+		"totalPages": 1,
+		"previousPage": "https://digi-api.com/api/v1/attribute?page=0",
+		"nextPage": ""
+	}
+}

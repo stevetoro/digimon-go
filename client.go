@@ -9,7 +9,8 @@ const dapiUrl = "https://digi-api.com/api/v1"
 type DigimonClient struct {
 	client *http.Client
 
-	Digimon DigimonService
+	Digimon   DigimonService
+	Attribute AttributeService
 }
 
 func NewDigimonClient() DigimonClient {
@@ -22,5 +23,6 @@ func NewDigimonClientWith(h *http.Client) DigimonClient {
 		c.client = h
 	}
 	c.Digimon = NewDigimonService(c.client)
+	c.Attribute = NewAttributeService(c.client)
 	return c
 }
