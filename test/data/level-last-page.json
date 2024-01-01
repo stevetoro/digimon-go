@@ -1,0 +1,41 @@
+{
+	"content": {
+		"name": "Level",
+		"description": "An Evolution Stage, also referred to as Level and Generation, is the level of development a Digimon is at.",
+		"fields": [
+			{
+				"id": 6,
+				"name": "Armor",
+				"href": "https://digi-api.com/api/v1/level/6"
+			},
+			{
+				"id": 7,
+				"name": "Child",
+				"href": "https://digi-api.com/api/v1/level/7"
+			},
+			{
+				"id": 8,
+				"name": "Baby II",
+				"href": "https://digi-api.com/api/v1/level/8"
+			},
+			{
+				"id": 9,
+				"name": "Unknown",
+				"href": "https://digi-api.com/api/v1/level/9"
+			},
+			{
+				"id": 10,
+				"name": "Digitama",
+				"href": "https://digi-api.com/api/v1/level/10"
+			}
+		]
+	},
+	"pageable": {
+		"currentPage": 1,
+		"elementsOnPage": 5,
+		"totalElements": 11,
+		"totalPages": 1,
+		"previousPage": "https://digi-api.com/api/v1/level?page=0",
+		"nextPage": ""
+	}
+}
